@@ -42,7 +42,6 @@ Customer.init(
 		},
 		address_1: {
 			type: STRING,
-			allowNull: false,
 		},
 		address_2: {
 			type: STRING,
@@ -81,7 +80,6 @@ Customer.init(
 		},
 		access_token: {
 			type: STRING,
-			allowNull: false,
 		},
 	},
 	{ sequelize, modelName: 'customer', timestamps: false, freezeTableName: true }

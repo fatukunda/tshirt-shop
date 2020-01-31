@@ -8,8 +8,8 @@ const auth = require('../middleware/auth');
 const router = express.Router();
 
 router.post('/customers', async (req, res) => {
-	const customer = Customer.build(req.body);
 	try {
+		const customer = await Customer.create(req.body);
 		const token = generateAuthToken(customer);
 		customer.access_token = token;
 		await customer.save();
